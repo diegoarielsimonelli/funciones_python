@@ -22,7 +22,7 @@ Si tienen dudas sobre el enunciado o alguno de los puntos por favor
 comuníquelo por el campus y lo discutiremos entre todos, ya que siempre
 puede haber varias interpretaciones de un mismo enunciado.
 
-Deberá realizar una lista para guardar 5 dados, guardar los números
+Deberá realizar una lista para guardar 5 dados_tirados, guardar los números
 sacados en esa tirada de de dados (son 5 dados, cada uno del número 1 al 6)
 
 1) El jugador tira la dados y saca 5 números aleatorios, puede usar
@@ -72,7 +72,22 @@ import random
 # Dentro de esta sección copiar y crear
 # todas las funciones que utilice
 
+def tirar():
+    dados_tirados=[]
+    for i in range(5):
+        dados_tirados.append(random.randint(1,6))
+    print('Los dados arrojados fueron:', dados_tirados)
+    return dados_tirados
 
+
+
+
+
+def contar(tirar, numero):
+    
+    cantidad_tres = tirar.count(numero) 
+    print (cantidad_tres)
+    return cantidad_tres
 # --------------------------------
 
 if __name__ == '__main__':
@@ -80,3 +95,11 @@ if __name__ == '__main__':
     # A partir de aquí escriba el código que
     # invoca al as funciones y resuelve el enunciado
     # Leer el enunciado con atención y consultar cualquier duda
+
+    cantidad_de_dados = 5
+    tirada_de_dados = []
+    juego = []
+    tiros_pendientes = 3
+    
+while True:
+    pass

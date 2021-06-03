@@ -1,50 +1,31 @@
-# Funciones [Python]
-# Ejercicios de práctica
-
-# Autor: Inove Coding School
-# Version: 2.0
-
-# IMPORTANTE: NO borrar los comentarios
-# que aparecen en verde con el hashtag "#"
-
-# Ejercicios con funciones y módulos
 import random
 
-# --------------------------------
-# Aquí dentro definir la función contar
-
-def contar(lista_numeros):
+def tirar():
+    dados=[]
+    for i in range(5):
+        dados.append(random.randint(1,6))
+    return dados
+dados=tirar()
+print(dados)
+def contar(tirar, numero):
     
-    for i in range(lista_numeros,3):    
-        cantidad_tres = lista_numeros.count(3) 
-        print (cantidad_tres)
-# Aquí copiar la función lista_aleatoria
-# ya elaborada
-def lista_aleatoria(inicio, fin, cantidad):
+    cantidad_tres = tirar.count(numero) 
+    print (cantidad_tres)
+    return cantidad_tres
     
-    mi_lista_aleatoria=[]
-    for i in range(cantidad):
-        numero = random.randrange(inicio, fin+1)
-        mi_lista_aleatoria.append(numero)
-        print("lista aleatoria:",mi_lista_aleatoria)
-
-# --------------------------------
-
-
 if __name__ == '__main__':
     print("Bienvenidos a otra clase de Inove con Python")
     
-    inicio = 0
-    fin = 9
-    cantidad = 5
+    cantidad_tres= contar(dados, 3)
 
     # Alumno: Crear la función "contar"
-    numero = random.randrange(inicio, fin+1)
+    
  
     # Utilice la función "lista_aleatoria"  creado antes 
     # para generar una lista de 5 números en
     # un rango de 1 a 9 inclusive
-    lista_numeros = lista_aleatoria(inicio, fin, cantidad)
+    
+   
     # lista_numeros = lista_aleatoria(inicio, fin, cantidad)
 
     # Generar una una nueva funcion que se llame "contar",
@@ -55,9 +36,9 @@ if __name__ == '__main__':
     # en la lista pueden usar el método nativo de list "count"
 
     # Por ejemplo creo una lista de 5 elemtnos
-    mi_lista_aleatoria= lista_aleatoria(inicio, fin, cantidad)
+    
     # Luego quiero averiguar cuantas veces se repite el numero 3
-    cantidad_tres = contar(lista_numeros,3)
+    
 
     # Luego de crear la función invocarla en este lugar:
     # Averiguar cuantas veces se repite el numero 3
@@ -69,6 +50,6 @@ if __name__ == '__main__':
     # cuantas veces se repite el tres en la lista
 
     # print(cantidad_tres)
-    print(cantidad_tres)
+
 
     print("terminamos")

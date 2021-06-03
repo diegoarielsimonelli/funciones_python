@@ -15,6 +15,7 @@
 def ordenar (numeros):
     lista_ordenada= sorted(numeros)
     print(lista_ordenada)
+    return lista_ordenada
 # --------------------------------
 
 
